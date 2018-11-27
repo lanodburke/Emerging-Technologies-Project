@@ -55,17 +55,17 @@ def pre_process():
 def load_image(img_path):
     img = image.load_img(img_path, color_mode="grayscale", target_size=(28, 28))
     img_tensor = image.img_to_array(img)
-    img_tensor = img_tensor.reshape(-1, 1, 28, 28).astype('float32')
+    img_tensor = img_tensor.reshape(img_tensor.shape[0], 1, 28, 28).astype('float32')
     # img_tensor = numpy.expand_dims(img_tensor, axis=0)
     img_tensor = img_tensor / 255
     return img_tensor
 
 def display_image(pred, img_path):
     # Adding a title to the Plot 
-    plt.title(pred)
+    plt.title("Prediction: " + str(pred))
     # Using the plt.imshow() to add the image plot to 
     # the matplotlib figure 
-    img = image.load_img(img_path, color_mode="grayscale", target_size=(28, 28))
+    img = image.load_img(img_path, target_size=(28, 28))
     plt.imshow(img, cmap='gray')
     # This just hides x and y tick values by passing in 
     # empty lists to make the output a little cleaner 

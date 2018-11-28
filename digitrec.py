@@ -95,6 +95,8 @@ def main(argv):
             pred = model.predict_classes(new_image)
             print("Prediction: ", pred[0])
             display_image(pred, image_path)
+         else:
+            print("Cannot load model as it does not exists!")
       elif opt in ("-b"):
          print("Building new model...")
          (X_train, y_train), (X_test, y_test) = pre_process()

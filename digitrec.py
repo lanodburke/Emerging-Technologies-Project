@@ -93,7 +93,7 @@ def main(argv):
             new_image = load_image(image_path)
             # check prediction
             pred = model.predict_classes(new_image)
-            print("Prediction: ", pred[0])
+            print("Prediction: ", pred)
             display_image(pred, image_path)
          else:
             print("Cannot load model as it does not exists!")

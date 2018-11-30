@@ -5,7 +5,6 @@
 ### JupyterNotebook ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
-digitrec_model.h5
 data/
 .DS_Store
 # Remove previous ipynb_checkpoints

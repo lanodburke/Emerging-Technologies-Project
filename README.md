@@ -36,3 +36,7 @@ Run the saved model and make a prediction on the image passed in as an argument
 ```
 python digitrec.py -t image.png
 ```
+
+### Contributors 
+- [Donal Burke](https://github.com/lanodburke/) (G00337729)
+
